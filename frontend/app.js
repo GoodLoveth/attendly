@@ -1,6 +1,6 @@
 
 
-const API_BASE_URL = "https://attendly-nine-kappa.vercel.app/";
+const API_BASE_URL = "https://attendly-nine-kappa.vercel.app/api";
 
 // ======================================================
 // AUTHENTICATION AND API HELPERS
@@ -97,7 +97,7 @@ async function apiFetch(endpoint, options = {}) {
     console.error("API connection error:", error);
 
     throw new Error(
-      "Cannot connect to the backend. Make sure your server is running at http://localhost:3000."
+      "Cannot connect to the server, Make sure you are connected to the interet."
     );
   }
 
