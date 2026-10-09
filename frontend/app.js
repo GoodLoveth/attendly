@@ -1,6 +1,6 @@
 
 
-const API_BASE_URL = "https://vercel.com/ore21/attendly/9mXKz3zLyBRShUwmyJNnB1BCgQK3";
+const API_BASE_URL = "https://attendly-nine-kappa.vercel.app";
 
 // ======================================================
 // AUTHENTICATION AND API HELPERS
