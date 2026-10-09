@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1.0"
+    >
+
+    <title>Login — Attendly</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body class="auth-page">
+
+
+    <section class="auth-visual">
+
+        <div class="brand-lockup">
+
+            <div class="brand-mark">
+
+                <img
+                    src="./assets/attendly-removebg.png"
+                    alt="Attendly logo"
+                >
+
+            </div>
+
+            <h1>
+                Attendly
+            </h1>
+
+            <p>
+                Track Attendance. Build Success.
+            </p>
+
+            <p
+                style="
+                    margin-top:28px;
+                    font-size:12px;
+                "
+            >
+                A modern and simple attendance tracking
+                application for students with secure
+                authentication, easy attendance management
+                and insightful reports.
+            </p>
+
+
+            <img
+                src="assets/attendly-index.png"
+                alt="student vector image"
+                height="300"
+            >
+
+        </div>
+
+    </section>
+
+
+    <section class="auth-card-wrap">
+
+        <div class="auth-card">
+
+            <h2>
+                Welcome Back!
+            </h2>
+
+            <p class="auth-subtitle">
+                Sign in to your account
+            </p>
+
+
+            <form id="loginForm">
+
+
+                <div class="form-group">
+
+                    <label class="form-label">
+                        Email address
+                    </label>
+
+                    <input
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        type="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label class="form-label">
+                        Password
+                    </label>
+
+                    <div class="password-wrap">
+
+                        <input
+                            id="password"
+                            name="password"
+                            class="form-control"
+                            type="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="passwordToggle"
+                        >
+                            ◉
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="auth-options">
+
+                    <label class="check">
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                        >
+
+                        Remember me
+
+                    </label>
+
+
+                    <a
+                        class="text-link"
+                        href="#"
+                    >
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary btn-block"
+                >
+                    Login
+                </button>
+
+
+                <p
+                    id="loginMessage"
+                    style="
+                        margin-top:15px;
+                        text-align:center;
+                    "
+                ></p>
+
+
+            </form>
+
+
+            <div class="divider">
+                or
+            </div>
+
+
+            <div class="auth-footer">
+
+                Don't have an account?
+
+                <a
+                    class="text-link"
+                    href="register.html"
+                >
+                    Register
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

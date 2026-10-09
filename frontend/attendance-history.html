@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance History — Attendly</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="sidebar-brand" href="dashboard.html"><span class="mini-logo">
+          <img src="./assets/attendly-removebg.png" alt="Attendly logo">
+        </span><strong>Attendly</strong></a>
+      <nav class="sidebar-nav">
+        <div class="nav-section">Main Menu</div><a class="nav-item " href="dashboard.html"><span
+            class="nav-icon">▦</span>Dashboard</a><a class="nav-item " href="students.html"><span
+            class="nav-icon">♙</span>Students</a><a class="nav-item " href="attendance.html"><span
+            class="nav-icon">✓</span>Attendance</a><a class="nav-item active" href="attendance-history.html"><span
+            class="nav-icon">◷</span>Attendance History</a><a class="nav-item " href="reports.html"><span
+            class="nav-icon">▤</span>Reports</a><a class="nav-item " href="settings.html"><span
+            class="nav-icon">⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-user">
+        <div class="avatar">AU</div>
+        <div class="user-meta"><strong>Admin User</strong><span>Administrator</span></div>
+      </div>
+    </aside>
+    <div class="overlay"></div>
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" aria-label="Open menu">☰</button>
+        <div class="search-wrap"><span>⌕</span><input class="global-search" placeholder="Search anything..."></div>
+        <div class="topbar-spacer"></div>
+        <button class="top-icon">♧<i class="dot"></i></button>
+        <div class="profile-menu">
+          <div class="avatar">AU</div><span>Admin⌄</span>
+        </div>
+      </header>
+
+      <section class="page">
+        <div class="page-head">
+          <div>
+            <h1>Attendance Records</h1>
+            <p>View and manage attendance history</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-pad">
+            <div class="filters">
+              <div><label class="filter-label">Start date</label><input class="form-control" type="date" id="historyStartDate">
+              <div><label class="filter-label">End date</label><input class="form-control" type="date" id="historyEndDate">
+              <div><label class="filter-label">Student</label><select class="form-control">
+                  <option>All Students</option>
+                  <option>Adeoti Mary</option>
+                  <option>Oreoluwa Shantel</option>
+                </select></div><button class="btn btn-primary filter-button">Filter</button>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Student</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Marked By</th>
+                </tr>
+              </thead>
+              <tbody id="attendanceHistoryBody">
+                <tr>
+                  <td colspan="5">Loading attendance history...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination"><button class="page-num">‹</button><button class="page-num active">1</button><button
+              class="page-num">2</button><button class="page-num">3</button><button class="page-num">›</button></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

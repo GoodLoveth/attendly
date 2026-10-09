@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Students — Attendly</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+
+        .students-page {
+            width: 100%;
+            min-width: 0;
+        }
+
+        .students-card {
+            width: 100%;
+            min-width: 0;
+        }
+
+        .students-table-wrap {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .students-table {
+            width: 100%;
+            min-width: 900px;
+            border-collapse: collapse;
+        }
+
+        .students-table th,
+        .students-table td {
+            padding: 13px 12px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        .students-table th:nth-child(1) {
+            width: 18%;
+        }
+
+        .students-table th:nth-child(2) {
+            width: 14%;
+        }
+
+        .students-table th:nth-child(3) {
+            width: 20%;
+        }
+
+        .students-table th:nth-child(4) {
+            width: 16%;
+        }
+
+        .students-table th:nth-child(5) {
+            width: 12%;
+        }
+
+        .students-table th:nth-child(6) {
+            width: 20%;
+        }
+
+        .student-actions {
+            display: flex;
+            gap: 7px;
+            flex-wrap: nowrap;
+        }
+
+        .student-actions .btn {
+            white-space: nowrap;
+        }
+
+        @media (max-width: 600px) {
+
+            .students-table {
+                min-width: 900px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <a
+            class="sidebar-brand"
+            href="dashboard.html"
+        >
+
+            <span class="mini-logo">
+
+                <img
+                    src="./assets/attendly-removebg.png"
+                    alt="Attendly"
+                >
+
+            </span>
+
+            <strong>Attendly</strong>
+
+        </a>
+
+
+        <nav class="sidebar-nav">
+
+            <div class="nav-section">
+                Main Menu
+            </div>
+
+
+            <a
+                class="nav-item"
+                href="dashboard.html"
+            >
+                <span class="nav-icon">▦</span>
+                Dashboard
+            </a>
+
+
+            <a
+                class="nav-item active"
+                href="students.html"
+            >
+                <span class="nav-icon">♙</span>
+                Students
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="attendance.html"
+            >
+                <span class="nav-icon">✓</span>
+                Attendance
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="attendance-history.html"
+            >
+                <span class="nav-icon">◷</span>
+                Attendance History
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="reports.html"
+            >
+                <span class="nav-icon">▤</span>
+                Reports
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="settings.html"
+            >
+                <span class="nav-icon">⚙</span>
+                Settings
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-user">
+
+            <div
+                class="avatar"
+                data-user-initials
+            >
+                AU
+            </div>
+
+
+            <div class="user-meta">
+
+                <strong data-user-name>
+                    Admin User
+                </strong>
+
+                <span data-user-role>
+                    Lecturer
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="btn btn-outline"
+            type="button"
+            data-logout
+            style="
+                margin:15px;
+                width:calc(100% - 30px);
+            "
+        >
+            Logout
+        </button>
+
+    </aside>
+
+
+    <div class="overlay"></div>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+
+        <header class="topbar">
+
+            <button
+                type="button"
+                class="menu-btn"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+
+            <div class="search-wrap">
+
+                <span>⌕</span>
+
+                <input
+                    type="search"
+                    class="global-search"
+                    placeholder="Search students..."
+                >
+
+            </div>
+
+
+            <div class="topbar-spacer"></div>
+
+
+            <div class="profile-menu">
+
+                <div
+                    class="avatar"
+                    data-user-initials
+                >
+                    AU
+                </div>
+
+                <span data-user-name>
+                    Admin User
+                </span>
+
+                <span>⌄</span>
+
+            </div>
+
+        </header>
+
+
+        <section class="page students-page">
+
+
+            <div class="page-head">
+
+                <div>
+
+                    <h1>
+                        Students
+                    </h1>
+
+                    <p>
+                        Manage students in your attendance system.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="add-student.html"
+                    class="btn btn-primary"
+                >
+                    + Add Student
+                </a>
+
+            </div>
+
+
+            <div class="card students-card">
+
+
+                <div class="card-head">
+
+                    <h3 class="card-title">
+                        All Students
+                    </h3>
+
+                </div>
+
+
+                <div class="students-table-wrap">
+
+                    <table class="students-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Name
+                                </th>
+
+                                <th>
+                                    Student ID
+                                </th>
+
+                                <th>
+                                    Email
+                                </th>
+
+                                <th>
+                                    Department
+                                </th>
+
+                                <th>
+                                    Level
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody
+                            id="studentsTableBody"
+                        >
+
+                            <tr>
+
+                                <td colspan="6">
+                                    Loading students...
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>

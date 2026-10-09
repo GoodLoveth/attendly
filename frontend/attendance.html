@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Attendance — Attendly</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+
+        .attendance-table {
+            width: 100%;
+            min-width: 760px;
+            border-collapse: collapse;
+        }
+
+        .attendance-table th,
+        .attendance-table td {
+            padding: 14px 12px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        .attendance-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 18px;
+        }
+
+        .attendance-date {
+            max-width: 220px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <aside class="sidebar">
+
+        <a
+            class="sidebar-brand"
+            href="dashboard.html"
+        >
+
+            <span class="mini-logo">
+
+                <img
+                    src="./assets/attendly-removebg.png"
+                    alt="Attendly"
+                >
+
+            </span>
+
+            <strong>Attendly</strong>
+
+        </a>
+
+
+        <nav class="sidebar-nav">
+
+            <div class="nav-section">
+                Main Menu
+            </div>
+
+            <a
+                class="nav-item"
+                href="dashboard.html"
+            >
+                <span class="nav-icon">▦</span>
+                Dashboard
+            </a>
+
+            <a
+                class="nav-item"
+                href="students.html"
+            >
+                <span class="nav-icon">♙</span>
+                Students
+            </a>
+
+            <a
+                class="nav-item active"
+                href="attendance.html"
+            >
+                <span class="nav-icon">✓</span>
+                Attendance
+            </a>
+
+            <a
+                class="nav-item"
+                href="attendance-history.html"
+            >
+                <span class="nav-icon">◷</span>
+                Attendance History
+            </a>
+
+            <a
+                class="nav-item"
+                href="reports.html"
+            >
+                <span class="nav-icon">▤</span>
+                Reports
+            </a>
+
+            <a
+                class="nav-item"
+                href="settings.html"
+            >
+                <span class="nav-icon">⚙</span>
+                Settings
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-user">
+
+            <div
+                class="avatar"
+                data-user-initials
+            >
+                AU
+            </div>
+
+            <div class="user-meta">
+
+                <strong data-user-name>
+                    Admin User
+                </strong>
+
+                <span data-user-role>
+                    Lecturer
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="btn btn-outline"
+            data-logout
+            style="
+                margin:15px;
+                width:calc(100% - 30px);
+            "
+        >
+            Logout
+        </button>
+
+    </aside>
+
+
+    <div class="overlay"></div>
+
+
+    <main class="main">
+
+
+        <header class="topbar">
+
+            <button
+                type="button"
+                class="menu-btn"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+
+            <div class="search-wrap">
+
+                <span>⌕</span>
+
+                <input
+                    class="global-search"
+                    type="search"
+                    placeholder="Search..."
+                >
+
+            </div>
+
+
+            <div class="topbar-spacer"></div>
+
+
+            <div class="profile-menu">
+
+                <div
+                    class="avatar"
+                    data-user-initials
+                >
+                    AU
+                </div>
+
+                <span data-user-name>
+                    Admin User
+                </span>
+
+                <span>⌄</span>
+
+            </div>
+
+        </header>
+
+
+        <section class="page">
+
+
+            <div class="page-head">
+
+                <div>
+
+                    <h1>
+                        Attendance
+                    </h1>
+
+                    <p>
+                        Mark today's student attendance.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+
+                <div class="card-head">
+
+                    <h3 class="card-title">
+                        Attendance Date
+                    </h3>
+
+
+                    <input
+                        id="attendanceDate"
+                        class="attendance-date"
+                        type="date"
+                    >
+
+                </div>
+
+
+                <div class="table-wrap">
+
+                    <table class="attendance-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Student
+                                </th>
+
+                                <th>
+                                    Student ID
+                                </th>
+
+                                <th>
+                                    Department
+                                </th>
+
+                                <th>
+                                    Attendance
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody
+                            id="attendanceTableBody"
+                        >
+
+                            <tr>
+
+                                <td colspan="4">
+                                    Loading students...
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <div class="attendance-actions">
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="saveAttendanceBtn"
+                    >
+                        Save Attendance
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>

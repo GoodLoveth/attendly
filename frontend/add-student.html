@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student — Attendly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="app">
+
+    <aside class="sidebar">
+        <a class="sidebar-brand" href="dashboard.html">
+            <span class="mini-logo">
+                <img src="./assets/attendly-removebg.png" alt="Attendly logo">
+            </span>
+            <strong>Attendly</strong>
+        </a>
+
+        <nav class="sidebar-nav">
+            <div class="nav-section">Main Menu</div>
+
+            <a class="nav-item" href="dashboard.html">
+                <span class="nav-icon">▦</span>Dashboard
+            </a>
+
+            <a class="nav-item active" href="students.html">
+                <span class="nav-icon">♙</span>Students
+            </a>
+
+            <a class="nav-item" href="attendance.html">
+                <span class="nav-icon">✓</span>Attendance
+            </a>
+
+            <a class="nav-item" href="attendance-history.html">
+                <span class="nav-icon">◷</span>Attendance History
+            </a>
+
+            <a class="nav-item" href="reports.html">
+                <span class="nav-icon">▤</span>Reports
+            </a>
+
+            <a class="nav-item" href="settings.html">
+                <span class="nav-icon">⚙</span>Settings
+            </a>
+        </nav>
+
+        <div class="sidebar-user">
+            <div class="avatar" data-user-initials>AU</div>
+            <div class="user-meta">
+                <strong data-user-name>Admin User</strong>
+                <span data-user-role>Lecturer</span>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-outline" data-logout
+            style="margin:15px;width:calc(100% - 30px);">
+            Logout
+        </button>
+    </aside>
+
+    <div class="overlay"></div>
+
+    <main class="main">
+        <header class="topbar">
+            <button type="button" class="menu-btn" aria-label="Open menu">
+                ☰
+            </button>
+
+            <div class="search-wrap">
+                <span>⌕</span>
+                <input class="global-search" placeholder="Search anything...">
+            </div>
+
+            <div class="topbar-spacer"></div>
+
+            <button type="button" class="top-icon" aria-label="Notifications">
+                ♧<i class="dot"></i>
+            </button>
+
+            <div class="profile-menu">
+                <div class="avatar" data-user-initials>AU</div>
+                <span data-user-name>Admin User</span>
+            </div>
+        </header>
+
+        <section class="page">
+            <div class="page-head">
+                <div>
+                    <h1 id="studentPageTitle">Add Student</h1>
+                    <p id="studentPageDescription">Create a new student record.</p>
+                </div>
+
+                <a href="students.html" class="btn btn-outline">
+                    ← Back to Students
+                </a>
+            </div>
+
+            <div class="card card-pad">
+                <form id="studentForm">
+                    <div class="grid-2">
+
+                        <div class="form-group">
+                            <label class="form-label" for="studentId">
+                                Student ID
+                            </label>
+                            <input
+                                id="studentId"
+                                name="studentId"
+                                class="form-control"
+                                type="text"
+                                placeholder="24/COM/006"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="name">
+                                Full Name
+                            </label>
+                            <input
+                                id="name"
+                                name="name"
+                                class="form-control"
+                                type="text"
+                                placeholder="Enter student's full name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="email">
+                                Email
+                            </label>
+                            <input
+                                id="email"
+                                name="email"
+                                class="form-control"
+                                type="email"
+                                placeholder="student@example.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="department">
+                                Department
+                            </label>
+                            <select id="department" name="department"
+                                class="form-control" required>
+                                <option value="">Select department</option>
+                                <option value="Computer Science">Computer Science</option>
+                                <option value="Business Administration">Business Administration</option>
+                                <option value="Accounting">Accounting</option>
+                                <option value="Mass Communication">Mass Communication</option>
+                                <option value="Mathematics">Mathematics</option>
+                                <option value="Physics">Physics</option>
+                                <option value="Statistics">Statistics</option>
+                                <option value="Public Administration">Public Administration</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="level">
+                                Level
+                            </label>
+                            <select id="level" name="level"
+                                class="form-control" required>
+                                <option value="">Select level</option>
+                                <option value="ND1">ND1</option>
+                                <option value="ND2">ND2</option>
+                                <option value="HND1">HND1</option>
+                                <option value="HND2">HND2</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <p id="studentMessage" role="status" style="margin-top:15px;"></p>
+
+                    <div style="display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;margin-top:25px;">
+                        <a href="students.html" class="btn btn-outline">
+                            Cancel
+                        </a>
+
+                        <button type="submit" class="btn btn-primary" id="addStudentButton">
+                            Add Student
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="app.js"></script>
+
+<script src="app.js"></script>
+</body>
+</html>

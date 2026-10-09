@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings — Attendly</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="sidebar-brand" href="dashboard.html"><span class="mini-logo">
+        <img src="./assets/attendly-removebg.png" alt="Attendly logo">
+      </span><strong>Attendly</strong></a>
+      <nav class="sidebar-nav">
+        <div class="nav-section">Main Menu</div><a class="nav-item " href="dashboard.html"><span
+            class="nav-icon">▦</span>Dashboard</a><a class="nav-item " href="students.html"><span
+            class="nav-icon">♙</span>Students</a><a class="nav-item " href="attendance.html"><span
+            class="nav-icon">✓</span>Attendance</a><a class="nav-item " href="attendance-history.html"><span
+            class="nav-icon">◷</span>Attendance History</a><a class="nav-item " href="reports.html"><span
+            class="nav-icon">▤</span>Reports</a><a class="nav-item active" href="settings.html"><span
+            class="nav-icon">⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-user">
+
+        <div class="avatar" data-user-initials>AU</div>
+
+        <div class="user-meta">
+            <strong data-user-name>Admin User</strong>
+            <span data-user-role>Lecturer</span>
+        </div>
+
+    </div>
+
+    <button
+        type="button"
+        class="btn btn-outline"
+        data-logout
+        style="margin:15px;width:calc(100% - 30px);">
+        Logout
+    </button>
+    </aside>
+    <div class="overlay"></div>
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" aria-label="Open menu">☰</button>
+        <div class="search-wrap"><span>⌕</span><input class="global-search" placeholder="Search anything..."></div>
+        <div class="topbar-spacer"></div>
+        <button class="top-icon">♧<i class="dot"></i></button>
+        <div class="profile-menu">
+          <div class="avatar">AU</div><span>Admin⌄</span>
+        </div>
+      </header>
+
+      <section class="page">
+        <div class="page-head">
+          <div>
+            <h1>Settings</h1>
+            <p>Manage your account and application preferences</p>
+          </div>
+        </div>
+        <div class="card card-pad form-card">
+          <h3 class="card-title" style="margin-bottom:18px">Profile Settings</h3>
+          <div class="form-grid">
+            <div class="form-group"><label class="form-label">Full Name</label><input class="form-control"
+                value="Admin User"></div>
+            <div class="form-group"><label class="form-label">Email Address</label><input class="form-control"
+                value="admin@example.com"></div>
+            <div class="form-group"><label class="form-label">Current Password</label><input class="form-control"
+                type="password"></div>
+            <div class="form-group"><label class="form-label">New Password</label><input class="form-control"
+                type="password"></div>
+            <div class="full"><label class="check"><input type="checkbox" checked> Send me attendance
+                notifications</label></div>
+          </div>
+          <div class="form-actions"><button class="btn btn-primary" data-demo="Settings saved successfully!">Save
+              Changes</button></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
