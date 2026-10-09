@@ -1,10 +1,6 @@
-/*
- * ATTENDLY FRONTEND JAVASCRIPT
- * Keep your existing HTML and CSS.
- * Connected to the Express API at localhost:3000.
- */
 
-const API_BASE_URL = "http://localhost:3000/api";
+
+const API_BASE_URL = "https://attendly-nine-kappa.vercel.app/";
 
 // ======================================================
 // AUTHENTICATION AND API HELPERS
