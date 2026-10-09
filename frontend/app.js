@@ -1,6 +1,6 @@
 
 
-const API_BASE_URL = "https://vercel.com/ore21/attendly/9mXKz3zLyBRShUwmyJNnB1BCgQK3/api";
+const API_BASE_URL = "https://vercel.com/ore21/attendly/9mXKz3zLyBRShUwmyJNnB1BCgQK3";
 
 // ======================================================
 // AUTHENTICATION AND API HELPERS
