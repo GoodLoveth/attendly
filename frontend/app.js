@@ -62,10 +62,13 @@ function logout(showMessage = false) {
 
 async function apiFetch(endpoint, options = {}) {
   const isAuthRoute = [
-    "/auth/login",
-    "/auth/register",
-    "/auth/signup"
-  ].includes(endpoint.split("?")[0]);
+  "/api/auth/login",
+  "/api/auth/register",
+  "/api/auth/signup",
+  "/auth/login",
+  "/auth/register",
+  "/auth/signup"
+].includes(endpoint.split("?")[0]);
 
   const headers = {
     ...(options.headers || {})
